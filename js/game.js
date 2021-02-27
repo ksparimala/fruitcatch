@@ -115,15 +115,17 @@ class Game{
                       }
                   }
                 
-
-         
-         
-        
-         
-
+      if(player.score>=10){
+          this.end()
+      }
     }
 
     end(){
+       game.update(2);
+       clear();
+       fill("red");
+       textSize(40);
+       text("gameover",350,300)
        console.log("Game Ended");
     }
 }
